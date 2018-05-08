@@ -1,0 +1,216 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/clear_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/layout_padding">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewMain"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="40dp"
+                android:text="@string/choose_image" />
+
+            <ImageView
+                android:id="@+id/Edit_image_view"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:foreground="@drawable/circle_container"
+                android:onClick="onClickImageChoose"
+                android:src="@drawable/ic_fitness_center"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayoutStyle">
+
+            <ImageView
+                style="@style/ImageViewIcons"
+                android:src="@drawable/ic_schedule"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                style="@style/TextViewMain"
+                android:text="@string/schedule" />
+
+            <LinearLayout
+                style="@style/LayoutSecondary"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/time_picker_wake_up"
+                    style="@style/EditTextMain"
+                    android:hint="@string/wake_up_time"
+                    android:onClick="wakeUp"
+                    android:inputType="time" />
+
+                <EditText
+                    android:id="@+id/time_picker_sleep_time"
+                    style="@style/EditTextMain"
+                    android:hint="@string/went_to_bed_at"
+                    android:onClick="sleep" />
+
+                <EditText
+                    android:id="@+id/date_picker"
+                    android:paddingLeft="8dp"
+                    android:onClick="showDatePickerDialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/date"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/LinearLayoutStyle">
+
+            <ImageView
+                style="@style/ImageViewIcons"
+                android:src="@drawable/ic_fitness_center"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                style="@style/TextViewMain"
+                android:text="@string/calories" />
+
+            <RelativeLayout style="@style/LayoutSecondary">
+
+                <EditText
+                    android:id="@+id/calories_burnt"
+                    style="@style/EditTextMain"
+                    android:hint="@string/calories_burnt"
+                    android:maxLength="3"
+                    android:inputType="number" />
+
+                <TextView
+                    style="@style/UnitsMain"
+                    android:text="@string/cal"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayoutStyle">
+
+            <ImageView
+                style="@style/ImageViewIcons"
+                android:src="@drawable/ic_directions_run"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                style="@style/TextViewMain"
+                android:text="@string/steps_completed" />
+
+            <RelativeLayout style="@style/LayoutSecondary">
+
+                <EditText
+                    android:id="@+id/steps_covered"
+                    style="@style/EditTextMain"
+                    android:maxLength="4"
+                    android:hint="@string/steps_completed_hint"
+                    android:inputType="number" />
+
+                <TextView
+                    style="@style/UnitsMain"
+                    android:text="@string/steps"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/assignment"
+            style="@style/LinearLayoutStyle">
+
+            <ImageView
+                style="@style/ImageViewIcons"
+                android:src="@drawable/ic_assignment"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                style="@style/TextViewMain"
+                android:text="@string/assignment" />
+
+            <LinearLayout
+                style="@style/LayoutSecondary"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/spinner_assignment"
+                    style="@style/SpinnerMain" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/LinearLayoutStyle">
+
+            <ImageView
+                style="@style/ImageViewIcons"
+                android:src="@drawable/water_black"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                style="@style/TextViewMain"
+                android:text="@string/water_consumed" />
+
+            <RelativeLayout style="@style/LayoutSecondary">
+
+                <EditText
+                    android:id="@+id/water_consumed"
+                    style="@style/EditTextMain"
+                    android:maxLength="2"
+                    android:hint="@string/water_consumed_hint"
+                    android:inputType="number" />
+
+                <TextView
+                    style="@style/UnitsMain"
+                    android:text="@string/lt"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/alcohol"
+            style="@style/LinearLayoutStyle">
+
+            <ImageView
+                style="@style/ImageViewIcons"
+                android:src="@drawable/alcohol_black"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                style="@style/TextViewMain"
+                android:text="@string/alcohol_consumption" />
+
+            <LinearLayout style="@style/LayoutSecondary">
+
+                <Spinner
+                    android:id="@+id/spinner_alcohol"
+                    style="@style/SpinnerMain" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
