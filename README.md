@@ -3,7 +3,8 @@ Habit Tracking app which would allow a user to store and track their habits over
 This project is a part of udacity nanodegree in android made for educational and practice ppurpose, fellows are free to make this as reference.
 
 Includes welcome activity screen which gives overview of the whole application usage for user.
-Each layout of screen contains : Image, breif description, current layout out of four layouts using dots below the layout.
+Each layout of screen contains : 
+Image, breif description, current layout out of four layouts using dots below the layout.
 Welcome screen are skippable(This makes activity destroy and calls main layout with list of tracking habits) and can be moved forward for calling main layout activity.
 
 ![screenshot 82](https://user-images.githubusercontent.com/25173010/39762609-b954a526-52f8-11e8-9136-20e3563cc727.png)
